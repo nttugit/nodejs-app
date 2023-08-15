@@ -24,8 +24,8 @@ pipeline {
             steps {
                     // Authenticate with the Docker registry
                     withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
-                      bat 'docker build -t nicenguyen/nodejs-app:v1 .'
-                      bat 'docker push nicenguyen/nodejs-app:v1'
+                      bat 'docker build -t nicenguyen/nodejs-app:v2 .'
+                      bat 'docker push nicenguyen/nodejs-app:v2'
                     }
             }
         }
